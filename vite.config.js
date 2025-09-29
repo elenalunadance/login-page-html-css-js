@@ -6,7 +6,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        signup: resolve(__dirname, 'signup.html'),
+        signup: resolve(__dirname, 'index.html'),
         forgot: resolve(__dirname, 'forgot-password.html'),
         login: resolve(__dirname, 'login.html'),
         terms: resolve(__dirname, 'terms.html'),

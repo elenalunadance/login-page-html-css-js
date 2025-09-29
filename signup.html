@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Create an account for your business, band, or celebrity profile on our social media platform. Share content today, tomorrow, or by location."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <title>Create Account - Logo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/login-page-html-css-js/assets/signup-DDajKN69.js"></script>
+    <link rel="stylesheet" crossorigin href="/login-page-html-css-js/assets/signup-UcrOPyen.css">
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <section class="left" aria-labelledby="left-title">
+          <h1 class="left__title" id="left-title">
+            Social media shared today, tomorrow or by location
+          </h1>
+          <div class="left__image-container">
+            <svg
+              class="left__circle"
+              width="593"
+              height="594"
+              viewBox="0 0 593 594"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <circle
+                cx="296.5"
+                cy="297.377"
+                r="296.5"
+                fill="url(#paint0_linear_2_236)"
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_2_236"
+                  x1="582.385"
+                  y1="593.877"
+                  x2="111.22"
+                  y2="-77.2092"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#0F70DA" />
+                  <stop offset="1" stop-color="#007AFF" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <img
+              class="left__phone"
+              src="img/phone.png"
+              alt="Smartphones displaying app features for storing, organizing, and sharing memories and documents"
+            />
+          </div>
+        </section>
+        <section class="right" aria-labelledby="right-title">
+          <header class="right__header">
+            <img class="right__logo" src="img/logo.png" alt="Logo" />
+            <span class="right__logo-text">Logo</span>
+          </header>
+          <h2 class="right__title" id="right-title">Create account</h2>
+          <p class="right__subtitle">For business, band or celebrity.</p>
+          <div id="alert" class="alert" role="alert"></div>
+          <form id="signup-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First name</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  required
+                  aria-required="true"
+                />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last name</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  required
+                  aria-required="true"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="emailOrPhone">Email or phone number</label>
+                <input
+                  type="text"
+                  id="emailOrPhone"
+                  name="emailOrPhone"
+                  required
+                  aria-required="true"
+                />
+              </div>
+              <div class="form-group">
+                <label for="dateOfBirth">Date of birth (MM/DD/YY) </label>
+                <input
+                  type="text"
+                  id="dateOfBirth"
+                  name="dateOfBirth"
+                  required
+                  aria-required="true"
+                  pattern="\d{2}/\d{2}/\d{2}"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  aria-required="true"
+                />
+              </div>
+              <div class="form-group">
+                <label for="confirmPassword">Confirm password</label>
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  required
+                  aria-required="true"
+                />
+              </div>
+            </div>
+            <div class="form-row form-row--space-between">
+              <div class="checkbox-group">
+                <input type="checkbox" id="rememberMe" name="rememberMe" />
+                <label for="rememberMe">Remember me</label>
+              </div>
+              <a href="/forgot-password.html" class="link">Forgot password?</a>
+            </div>
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                id="agreeTerms"
+                name="agreeTerms"
+                required
+                aria-required="true"
+              />
+              <label for="agreeTerms"
+                >I agree to all the
+                <a href="/terms.html" class="link">Terms</a> and
+                <a href="/privacy.html" class="link">Privacy policy</a></label
+              >
+            </div>
+            <div class="form-row">
+              <button type="submit" class="btn btn--primary">
+                Create account
+              </button>
+              <button type="button" class="btn btn--google">
+                <img class="btn__icon" src="img/icon-google.png" alt="" />
+                Sign-in with Google
+              </button>
+            </div>
+          </form>
+          <p class="right__login">
+            Don’t have an account? <a href="/login.html" class="link">Log in</a>
+          </p>
+          <div class="app-stores">
+            <a
+              href="https://play.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="img/google-play.png" alt="Get it on Google Play" />
+            </a>
+            <a
+              href="https://www.apple.com/app-store/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="img/app-store.png" alt="Download on the App Store" />
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

@@ -11,12 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const firstName = form.firstName.value.trim();
     const lastName = form.lastName.value.trim();
     const emailOrPhone = form.emailOrPhone.value.trim();
-    const dateOfBirth = form.dateOfBirth.value.trim();
+    let dateOfBirth = form.dateOfBirth.value.trim();
     const password = form.password.value;
     const confirmPassword = form.confirmPassword.value;
     const agreeTerms = form.agreeTerms.checked;
 
-    // Валидация email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (emailOrPhone && !emailRegex.test(emailOrPhone)) {
       const phoneRegex = /^\+?\d{10,14}$/;
@@ -29,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Валидация и форматирование даты
     if (dateOfBirth) {
       const dateParts = dateOfBirth.split('/');
       if (
@@ -57,9 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
         alertEl.style.display = 'block';
         return;
       }
-      const formattedDate = `${String(month).padStart(2, '0')}/${String(
-        day
-      ).padStart(2, '0')}/${String(year).padStart(2, '0')}`;
+      dateOfBirth = `${String(month).padStart(2, '0')}/${String(day).padStart(
+        2,
+        '0'
+      )}/${String(year).padStart(2, '0')}`;
     }
 
     if (
@@ -85,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    console.log({
+    const data = {
       firstName,
       lastName,
       emailOrPhone,
@@ -93,10 +92,37 @@ document.addEventListener('DOMContentLoaded', () => {
       password,
       rememberMe: form.rememberMe.checked,
       agreeTerms,
-    });
+    };
 
-    alertEl.textContent = 'Account created successfully!';
+    console.log('Form data:', data);
+    alertEl.textContent = 'Account created successfully! (Simulated)';
     alertEl.classList.add('alert--success');
     alertEl.style.display = 'block';
+
+    /*
+      fetch('/api/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then((result) => {
+          alertEl.textContent = 'Account created successfully!';
+          alertEl.classList.add('alert--success');
+          alertEl.style.display = 'block';
+        })
+        .catch((error) => {
+          alertEl.textContent = 'Error creating account: ' + error.message;
+          alertEl.classList.add('alert--error');
+          alertEl.style.display = 'block';
+        });
+      */
   });
 });

@@ -1,11 +1,11 @@
-@import url('/assets/styles/reset.css');
-@import url('/assets/styles/left.css');
-@import url('/assets/styles/right.css');
-@import url('/assets/styles/form.css');
-@import url('/assets/styles/buttons.css');
-@import url('/assets/styles/app-stores.css');
-@import url('/assets/styles/links.css');
-@import url('/assets/styles/alert.css');
+@import url('./form.css');
+@import url('./left.css');
+@import url('./right.css');
+@import url('./form.css');
+@import url('./buttons.css');
+@import url('./app-stores.css');
+@import url('./links.css');
+@import url('./alert.css');
 
 .container {
   display: flex;

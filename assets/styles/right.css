@@ -1,0 +1,97 @@
+.right {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 55%;
+  max-width: 69rem;
+  min-height: 100svh;
+  padding: 4rem 14rem 1.5rem 8rem;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 1500px) {
+  .right {
+    padding: 4rem 4rem 1.5rem 4rem;
+  }
+}
+
+.right__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.right__logo-img {
+  width: 2.56rem;
+  height: 3rem;
+}
+
+.right__logo-text {
+  font-weight: bold;
+  font-size: 1.13rem;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #1d1d1d;
+}
+
+.right__title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1d1d1d;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem 0;
+}
+
+.right__subtitle {
+  margin-bottom: 3rem;
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+  color: #2d3748;
+}
+
+.right__login {
+  text-align: center;
+  font-size: 0.88rem;
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 767px) {
+  .right {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .right__logo {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .right__logo-img {
+    width: 1.5rem;
+    height: 1.875rem;
+  }
+
+  .right__logo-text {
+    font-size: 0.88rem;
+  }
+
+  .right__title {
+    font-size: 1.25rem;
+  }
+
+  .right__subtitle {
+    font-size: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .right__login {
+    font-size: 0.75rem;
+  }
+}

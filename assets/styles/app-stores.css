@@ -1,0 +1,20 @@
+.app-stores {
+  display: flex;
+  gap: 0.25rem;
+  margin-top: 4rem;
+}
+
+.app-stores img {
+  width: auto;
+  height: 40px;
+}
+
+@media (max-width: 767px) {
+  .app-stores {
+    margin-top: 2rem;
+  }
+
+  .app-stores img {
+    height: 30px;
+  }
+}

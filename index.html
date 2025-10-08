@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Create an account for your business, band, or celebrity profile on our social media platform. Share content today, tomorrow, or by location."
+    />
+    <meta name="robots" content="index, follow" />
+
+    <title>Create Account - Logo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/styles/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="left">
+        <h1 class="left__title" id="left-title">
+          Social media shared today, tomorrow or&nbsp;by&nbsp;location
+        </h1>
+        <div class="left__image-container">
+          <img
+            class="left__phone"
+            src="assets/images/phone.avif"
+            alt="Smartphones displaying app features for storing, organizing, and sharing memories and documents"
+          />
+        </div>
+      </section>
+
+      <section class="right">
+        <div class="right__logo">
+          <img
+            class="right__logo-img"
+            src="assets/images/logo.avif"
+            alt="Logo"
+          />
+          <span class="right__logo-text">Logo</span>
+        </div>
+        <h2 class="right__title" id="right-title">Create account</h2>
+        <p class="right__subtitle">For business, band or celebrity.</p>
+
+        <div id="alert" class="alert" role="alert" aria-live="polite"></div>
+
+        <form
+          id="signup-form"
+          method="POST"
+          onsubmit="return handleSubmit(event)"
+        >
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First name</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                required
+                aria-required="true"
+                minlength="2"
+                placeholder="Enter your first name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last name</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                required
+                aria-required="true"
+                minlength="2"
+                placeholder="Enter your last name"
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="emailOrPhone">Email or phone number</label>
+              <input
+                type="text"
+                id="emailOrPhone"
+                name="emailOrPhone"
+                required
+                aria-required="true"
+                pattern="^\+?\d{10,14}$|^[^\s@]+@[^\s@]+\.[^\s@]+$"
+                placeholder="user@example.com or +1234567890"
+                title="Enter a valid email (e.g., user@example.com) or phone number (e.g., +1234567890)"
+              />
+            </div>
+            <div class="form-group">
+              <label for="dateOfBirth">Date of birth</label>
+              <input
+                type="date"
+                id="dateOfBirth"
+                name="dateOfBirth"
+                required
+                aria-required="true"
+                min="1900-01-01"
+                max="2030-12-31"
+                placeholder="Select your date of birth"
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                aria-required="true"
+                minlength="8"
+                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                placeholder="At least 8 characters with letters and numbers"
+                title="Password must be at least 8 characters with letters and numbers"
+              />
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword">Confirm password</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                required
+                aria-required="true"
+                minlength="8"
+                oninput="this.setCustomValidity(this.value !== document.getElementById('password').value ? 'Passwords do not match' : '')"
+                placeholder="Re-enter your password"
+                title="Must match the password above"
+              />
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <div class="checkbox-group">
+              <input type="checkbox" id="rememberMe" name="rememberMe" />
+              <label for="rememberMe">Remember me</label>
+            </div>
+            <a href="/forgot-password.html" class="link-password"
+              >Forgot password?</a
+            >
+          </div>
+          <div class="checkbox-group">
+            <input
+              type="checkbox"
+              id="agreeTerms"
+              name="agreeTerms"
+              required
+              aria-required="true"
+            />
+            <label for="agreeTerms">
+              I agree to all the
+              <a href="#" class="link">Terms</a> and
+              <a href="#" class="link">Privacy policy</a>
+            </label>
+          </div>
+
+          <div class="form-actions buttons">
+            <button type="submit" class="btn btn--primary">
+              Create account
+            </button>
+            <button type="button" class="btn btn--google">
+              <img
+                class="btn__icon"
+                src="assets/images/iconfinder_google.avif"
+                alt=""
+              />
+              Sign-in with Google
+            </button>
+          </div>
+        </form>
+
+        <p class="right__login">
+          Don’t have an account? <a href="#" class="link">Log in</a>
+        </p>
+        <div class="app-stores">
+          <a
+            href="https://play.google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="assets/images/google_play.avif"
+              alt="Get it on Google Play"
+            />
+          </a>
+          <a
+            href="https://www.apple.com/app-store/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="assets/images/app_store.avif"
+              alt="Download on the App Store"
+            />
+          </a>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/scripts/formHandler.js"></script>
+    <script type="module" src="/scripts/ui.js"></script>
+  </body>
+</html>

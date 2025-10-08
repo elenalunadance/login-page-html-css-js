@@ -1,0 +1,24 @@
+.link {
+  color: #0054b8;
+  text-decoration: none;
+}
+
+.link-password:hover,
+.link:hover {
+  text-decoration: underline;
+}
+
+.link-password {
+  font-size: 0.88rem;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+  justify-self: right;
+  color: #0054b8;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .link-password {
+    font-size: 0.75rem;
+  }
+}
